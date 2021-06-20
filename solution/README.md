@@ -17,5 +17,5 @@ sudo curl http://localhost:9393/ 						-	To get the output
 If everyting goes fine, you can see the output a html page with orange broder and the data from inputFile
 
 curl -o ./part-1-output http://localhost:9393/raw				- 	To save save curl output to file (/part-1-output)
-docker logs [container_id] >& part-1-logs					-	To save container logs in file (part-1-logs)
-
+sudo docker logs [container_id] >& part-1-logs					-	To save container logs in file (part-1-logs)
+udo docker network create csvserver						-	To create seperate network for containers

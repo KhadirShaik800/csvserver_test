@@ -2,5 +2,21 @@ version: '3'
 services:
    csvserver:
       image: infracloudio/csvserver:v1
+      container_name: csvserver
+      restart: always
       ports:
          - 9393:9300
+   prometheus:
+      image: prom/prometheus:v2.22.0
+      container_name: prometheus
+      restart: always
+      ports:
+         - 9090:9090
+      volumes:
+         - ./prometheus/:/etc/prometheus/
+
+
+networks:
+  default:
+    external:
+      name: csvserver           
