@@ -1,0 +1,6 @@
+version: '3'
+services:
+   csvserver:
+      image: infracloudio/csvserver:v1
+      ports:
+         - 9393:9300
